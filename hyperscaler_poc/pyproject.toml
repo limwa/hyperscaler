@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperscaler_poc"
+version = "0.1.0"
+description = "A pyinfra proof-of-concept module that installs cowsay through DNF."
+requires-python = ">=3.11"
+dependencies = ["pyinfra>=3,<4"]
+
+[tool.setuptools.packages.find]
+include = ["hyperscaler_poc*"]
+
+[tool.pytest.ini_options]
+testpaths = ["integration_tests"]
+markers = [
+  "integration: live QEMU/libvirt integration tests",
+]

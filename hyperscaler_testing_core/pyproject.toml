@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperscaler_testing_core"
+version = "0.1.0"
+description = "Reusable QEMU/libvirt integration testing helpers for hyperscaler modules."
+requires-python = ">=3.11"
+dependencies = ["libvirt-python>=10"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["hyperscaler_testing_core*"]
